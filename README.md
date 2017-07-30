@@ -14,6 +14,10 @@ This project is a very early work in progress, and much work needs to be done be
 - To build all parts of KatOS, type `./buildall.sh` in your terminal.
 - To remove all compiled binaries from your folder, type `./clean.sh` in your terminal.
 
+# Running
+To run KatOS in a VM or on a PC, use the file from the /instaler/output.iso folder, or download a precompiled release from the releases page.
+KatOS requires a x86_64 CPU, a EFI/UEFI motherboard, and at least 128MB of RAM. To install KatOS, 400MB of storage space is required.
+
 # More info
 Have extra questions, or want to help contribute?
 Join the KatOS Discord server at https://discord.gg/qsXJS6m for that and lots more!
