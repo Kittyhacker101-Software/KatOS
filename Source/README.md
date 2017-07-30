@@ -9,5 +9,5 @@ The updated file must have the same archive format as the older file, or this wi
 Do not rename the new file, or the build script will fail to work properly.
 
 # Issues
-If you have any issues with the build scripts breaking due to an update, contact kittyhacker101@protonmail.com and notify me of the problem.]
+If you have any issues with the build scripts breaking due to an update, file an issue and notify me of the problem.
 If you are having issues with the build scripts not detecting the updated file, make sure the older file is not present, and that the extention + naming scheme is similar to the older file.
