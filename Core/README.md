@@ -15,4 +15,4 @@ This will rebuild all of the components from source code, and may take a while i
 # Updating
 To update a component's source code, put the new source tarball in the /sources folder, and then run `./build.sh`.
 The Basefs.tar.xz and Initfs.tar.xz are manually made, and do not contain binaries, only config files.
-If those stop functioning due to an update, please contact kittyhacker101@protonmail.com and notify me of the problem.
+If those stop functioning due to an update, please file a GitHub issue, and I will take a look into the problem.
