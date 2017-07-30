@@ -22,4 +22,4 @@ KatOS requires a x86_64 CPU, a EFI/UEFI motherboard, and at least 128MB of RAM. 
 Have extra questions, or want to help contribute?
 Join the KatOS Discord server at https://discord.gg/qsXJS6m for that and lots more!
 If you would like to contact me directly, send an email to kittyhacker101@protonmail.com
-Replies to emails often take 2-7 days, so please use Discord for reporting issues when possible.
+Replies to emails often take 2-7 days, so please use GitHub issues instead for bug reports.
