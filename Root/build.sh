@@ -30,8 +30,8 @@ strip --strip-all -v \
   install/usr/bin/* \
   install/sbin/* \
   install/usr/sbin/* \
-  install/lib/*
-cd install  
-tar cf - * | xz -9 -e --check=none > ../rootfs.tar.xz
+  install/lib/* \
+  install/usr/lib/*
+tar cfv - * | xz -9 -e --check=none > ../rootfs.tar.xz
 cd ..
 rm -r install
