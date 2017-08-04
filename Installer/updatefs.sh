@@ -12,7 +12,7 @@ strip --strip-all -v \
   rootfs/usr/sbin/* 
 cd rootfs
 tar -xvf ../../Core/Initfs.tar.xz
-find . | cpio -R root:root -H newc -o | xz -9 -e --check=none > ../rootfs.cpio.xz
+find . | cpio -R root:root -H newc -o -v | xz -9 -e --check=none > ../rootfs.cpio.xz
 cd ..
 rm -r rootfs
 
@@ -33,7 +33,7 @@ echo -off
 echo "Loading KatOS..."
 \\kernel.xz initrd=\\rootfs.xz quiet
 CEOF
-tar cf - * | xz -9 -e --check=none > ../boot.tar.xz
+tar cfv - * | xz -9 -e --check=none > ../boot.tar.xz
 
 # Create ISO image for MBR.
 cd ..
