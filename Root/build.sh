@@ -25,6 +25,7 @@ http://nl.alpinelinux.org/alpine/latest-stable/main/
 http://nl.alpinelinux.org/alpine/latest-stable/community/
 CEOF
 
+cd install
 strip --strip-all -v \
   install/bin/* \
   install/usr/bin/* \
