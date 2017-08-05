@@ -13,6 +13,7 @@ apk add musl
 apk add openssl
 apk add busybox
 apk add apk-tools
+apk cache clean
 
 clear
 echo "KatOS has been installed. You may remove the LiveCD now."
