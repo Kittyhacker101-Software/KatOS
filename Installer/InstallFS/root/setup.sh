@@ -8,9 +8,11 @@ ln -s /var/cache/apk /etc/apk/cache
 
 apk --root / --initdb add
 apk update
+apk add alpine-keys
 apk add musl
 apk add openssl
 apk add busybox
+apk add apk-tools
 
 clear
 echo "KatOS has been installed. You may remove the LiveCD now."
