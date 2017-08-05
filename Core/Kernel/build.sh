@@ -9,6 +9,7 @@ make mrproper -j 32
 make defconfig -j 32
 echo "CONFIG_OVERLAY_FS=n" >> .config
 echo "CONFIG_APPLE_PROPERTIES=n" >> .config
+echo "CONFIG_PRINTK=n" >> .config
 echo "CONFIG_BUG=n" >> .config
 sed -i "s/.*\\(CONFIG_KERNEL_.*\\)=y/\\#\\ \\CONFIG_KERNEL is not set/" .config  
 sed -i "s/.*CONFIG_KERNEL_XZ.*/CONFIG_KERNEL_XZ=y/" .config
@@ -31,9 +32,9 @@ sed -i -e "s/# CONFIG_SCHED_BFS is not set/CONFIG_SCHED_BFS=y/g"               \
     -i -e "s/CONFIG_DEFAULT_CFQ=y/# CONFIG_DEFAULT_CFQ is not set/g"           \
     -i -e "s/CONFIG_DEFAULT_DEADLINE=y/# CONFIG_DEFAULT_DEADLINE is not set/g" \
     -i -e "s/CONFIG_DEFAULT_NOOP=y/# CONFIG_DEFAULT_NOOP is not set/g"         \
-    -i -e "s/CONFIG_DEFAULT_IOSCHED="cfq"/CONFIG_DEFAULT_IOSCHED="bfq"/g"      \
-    -i -e "s/CONFIG_DEFAULT_IOSCHED="deadline"/CONFIG_DEFAULT_IOSCHED="bfq"/g" \
-    -i -e "s/CONFIG_DEFAULT_IOSCHED="noop"/CONFIG_DEFAULT_IOSCHED="bfq"/g"     \
+    -i -e "s/CONFIG_DEFAULT_IOSCHED="cfq"/CONFIG_DEFAULT_IOSCHED="deadline"/g"      \
+    -i -e "s/CONFIG_DEFAULT_IOSCHED="bfq"/CONFIG_DEFAULT_IOSCHED="deadline"/g" \
+    -i -e "s/CONFIG_DEFAULT_IOSCHED="noop"/CONFIG_DEFAULT_IOSCHED="deadline"/g"     \
 -i -e "s/# CONFIG_DEFAULT_BFQ is not set/CONFIG_DEFAULT_BFQ=y/g" .config
 sed -i -e 's/^CONFIG_HZ_300=y/# CONFIG_HZ_300 is not set/'   \
     -i -e 's/^# CONFIG_HZ_1000 is not set/CONFIG_HZ_1000=y/' \
