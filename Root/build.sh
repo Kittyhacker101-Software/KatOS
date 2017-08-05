@@ -1,7 +1,6 @@
 #!/bin/sh
 rm rootfs.tar.xz
 
-cp ../Source/apk-tools-2*.apk apk-tools.apk
 cp ../Source/alpine-keys-*.apk apk-keys.apk
 cp ../Source/apk-tools-static-*.apk apk-static.apk
 cp ../Source/musl-*.apk musl.apk
@@ -9,7 +8,6 @@ cp ../Source/busybox-*.apk busybox.apk
 mkdir install
 cp ../Core/Busybox/busybox_installed/* -r -v install/
 cd install
-tar -xvf ../apk-tools.apk
 tar -xvf ../apk-keys.apk
 tar -xvf ../musl.apk
 tar -xvf ../busybox.apk
