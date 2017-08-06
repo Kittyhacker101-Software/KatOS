@@ -1,6 +1,5 @@
 #!/bin/sh
 rm kernelImage
-rm -r headers
 
 cp ../../Source/linux-*.tar.xz linux.tar.xz
 tar -xvf linux.tar.xz
@@ -43,9 +42,6 @@ echo "CONFIG_EFI_MIXED=y" >> .config
 make \
   CFLAGS="-O3 -s -fno-stack-protector -fomit-frame-pointer -U_FORTIFY_SOURCE" \
   bzImage -j 32
-make \
-  INSTALL_HDR_PATH=../headers \
-  headers_install -j 32
 cp arch/x86_64/boot/bzImage \
   ../kernelImage
 cd ..
