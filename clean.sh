@@ -17,7 +17,6 @@ cd ..
 
 cd Kernel
 rm kernelImage
-rm -r headers
 rm linux.tar.xz
 cd ..
 
