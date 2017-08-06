@@ -19,8 +19,9 @@ cp sbin/apk.static install/sbin/apk
 rm -r sbin
 
 cat << CEOF > install/etc/apk/repositories
-http://nl.alpinelinux.org/alpine/latest-stable/main/
-http://nl.alpinelinux.org/alpine/latest-stable/community/
+http://nl.alpinelinux.org/alpine/edge/main/
+http://nl.alpinelinux.org/alpine/edge/community/
+http://nl.alpinelinux.org/alpine/edge/testing/
 CEOF
 
 cd install
