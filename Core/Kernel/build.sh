@@ -25,6 +25,8 @@ sed -i "s/.*CONFIG_FILE_LOCKING.*/\\# CONFIG_FILE_LOCKING is not set/" .config
 sed -i "s/.*CONFIG_KALLSYMS.*/\\# CONFIG_KALLSYMS is not set/" .config
 sed -i "s/.*CONFIG_SWAP.*/\\# CONFIG_SWAP is not set/" .config
 # Kernel Speed Optimizations
+sed -i "s/^CONFIG_CPU_FREQ_DEFAULT_GOV_USERSPACE.*/\\# CONFIG_CPU_FREQ_DEFAULT_GOV_USERSPACE is not set/" .config
+sed -i -e "s/# CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE is not set/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE=y/g" .config
 sed -i "/CONFIG_SCHED_CFS=y/d"                                                 .config
 sed -i -e "s/# CONFIG_SCHED_BFS is not set/CONFIG_SCHED_BFS=y/g"               \
     -i -e "s/# CONFIG_IOSCHED_BFQ is not set/CONFIG_IOSCHED_BFQ=y/g"           \
