@@ -34,24 +34,10 @@ echo "Loading KatOS..."
 \\kernel.xz initrd=\\rootfs.xz quiet
 CEOF
 tar cfv - * | xz -9 -e --check=none > ../boot.tar.xz
-
-# Create ISO image for MBR.
 cd ..
-genisoimage \
-  -J \
-  -r \
-  -o boot.iso \
-  -b isolinux.bin \
-  -c boot.cat \
-  -input-charset UTF-8 \
-  -no-emul-boot \
-  -boot-load-size 4 \
-  -boot-info-table \
-  ./isoimage
-$SYSLINUX/bios/utils/isohybrid boot.iso
+rm -r isoimage
 rm rootfs.cpio.xz
 rm -r $SYSLINUX
-rm -r isoimage
 
 # Move files into installer filesystem
 mv boot.iso InstallFS/root/boot.iso
