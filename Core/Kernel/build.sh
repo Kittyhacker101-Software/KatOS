@@ -43,7 +43,7 @@ sed -i -e 's/^CONFIG_HZ_300=y/# CONFIG_HZ_300 is not set/'   \
 echo "CONFIG_EFI_MIXED=y" >> .config
 sed -i -e "s/# CONFIG_MAXSMP is not set/CONFIG_MAXSMP=y/g" .config
 make \
-  CFLAGS="-O3 -s -fno-stack-protector -fomit-frame-pointer -U_FORTIFY_SOURCE" \
+  CFLAGS="-O3 -s -fno-stack-protector -fomit-frame-pointer -U_FORTIFY_SOURCE -pipe" \
   bzImage -j 32
 cp arch/x86_64/boot/bzImage \
   ../kernelImage
