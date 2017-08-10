@@ -2,15 +2,10 @@
 rm output.iso
 
 cp -v ../Core/Busybox/busybox_installed -r rootfs
-strip --strip-all -v \
-  rootfs/bin/* \
-  rootfs/usr/bin/* \
-  rootfs/sbin/* \
-  rootfs/usr/sbin/* 
 cd rootfs
 tar -xvf ../../Core/Basefs.tar.xz
 cp -v ../InstallFS/* -r .
-find . | cpio -R root:root -H newc -o -v  | xz -9 -e --check=none > ../rootfs.cpio.xz
+find . | cpio -R root:root -H newc -o -v | xz -9 -e --check=none > ../rootfs.cpio.xz
 cd ..
 rm -r rootfs
 
@@ -23,10 +18,12 @@ mkdir isoimage
 cp ../Core/Kernel/kernelImage ./isoimage/kernel.xz
 cp rootfs.cpio.xz ./isoimage/rootfs.xz
 cd isoimage
-cp $SYSLINUX/bios/core/isolinux.bin .
+
+#cp $SYSLINUX/bios/core/isolinux.bin .
 #cp $SYSLINUX/bios/com32/elflink/ldlinux/ldlinux.c32 .
 #strip -s ldlinux.c32
 #echo 'default kernel.xz initrd=rootfs.xz quiet' > ./syslinux.cfg
+
 mkdir -p efi/boot
 cat << CEOF > ./efi/boot/startup.nsh
 echo -off

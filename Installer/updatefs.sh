@@ -5,11 +5,6 @@ rm InstallFS/root/rootfs.tar.xz
 
 # Build Initrd
 cp -v ../Core/Busybox/busybox_installed -r rootfs
-strip --strip-all -v \
-  rootfs/bin/* \
-  rootfs/usr/bin/* \
-  rootfs/sbin/* \
-  rootfs/usr/sbin/* 
 cd rootfs
 tar -xvf ../../Core/Initfs.tar.xz
 find . | cpio -R root:root -H newc -o -v | xz -9 -e --check=none > ../rootfs.cpio.xz
