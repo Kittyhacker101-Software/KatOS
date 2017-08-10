@@ -1,10 +1,6 @@
 #!/bin/sh
 
 echo -e 'toor\ntoor\n' | passwd root
-rm /init
-
-mkdir -p /var/cache/apk
-ln -s /var/cache/apk /etc/apk/cache
 
 apk --root / --initdb add
 apk update
