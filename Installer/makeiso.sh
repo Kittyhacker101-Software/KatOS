@@ -8,7 +8,6 @@ strip --strip-all -v \
   rootfs/sbin/* \
   rootfs/usr/sbin/* 
 cd rootfs
-mkdir rootfs
 tar -xvf ../../Core/Basefs.tar.xz
 cp -v ../InstallFS/* -r .
 find . | cpio -R root:root -H newc -o -v  | xz -9 -e --check=none > ../rootfs.cpio.xz
