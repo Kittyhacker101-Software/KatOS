@@ -18,6 +18,8 @@ tar -xvf apk-static.apk
 cp sbin/apk.static install/sbin/apk
 rm -r sbin
 
+mkdir -p install/var/cache/apk
+ln -s /var/cache/apk install/etc/apk/cache
 cat << CEOF > install/etc/apk/repositories
 http://nl.alpinelinux.org/alpine/edge/main/
 http://nl.alpinelinux.org/alpine/edge/community/
