@@ -48,4 +48,4 @@ mount --move /tmp /rootfs/tmp
 cp /root/setup.sh /rootfs/tmp
 
 umount /boot
-chroot /rootfs /tmp/setup.sh
+chroot /rootfs /bin/sh /tmp/setup.sh
