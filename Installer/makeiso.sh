@@ -19,7 +19,7 @@ cp ../Core/Kernel/kernelImage ./isoimage/kernel.xz
 cp rootfs.cpio.xz ./isoimage/rootfs.xz
 cd isoimage
 
-#cp $SYSLINUX/bios/core/isolinux.bin .
+cp $SYSLINUX/bios/core/isolinux.bin .
 #cp $SYSLINUX/bios/com32/elflink/ldlinux/ldlinux.c32 .
 #strip -s ldlinux.c32
 #echo 'default kernel.xz initrd=rootfs.xz quiet' > ./syslinux.cfg

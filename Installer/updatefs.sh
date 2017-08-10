@@ -1,5 +1,4 @@
 #!/bin/sh
-rm InstallFS/root/boot.iso
 rm InstallFS/root/boot.tar.xz
 rm InstallFS/root/rootfs.tar.xz
 
@@ -11,7 +10,7 @@ find . | cpio -R root:root -H newc -o -v | xz -9 -e --check=none > ../rootfs.cpi
 cd ..
 rm -r rootfs
 
-# Build boot partition data..
+# Build boot partition data
 mkdir isoimage
 cp ../Core/Kernel/kernelImage ./isoimage/kernel.xz
 cp rootfs.cpio.xz ./isoimage/rootfs.xz
@@ -22,12 +21,10 @@ echo -off
 echo "Loading KatOS..."
 \\kernel.xz initrd=\\rootfs.xz quiet
 CEOF
-tar cfv - * | xz -9 -e --check=none > ../boot.tar.xz
+tar cfv - * | xz -9 -e --check=none > ../InstallFS/root/boot.tar.xz
 cd ..
 rm -r isoimage
 rm rootfs.cpio.xz
 
-# Move files into installer filesystem
-mv boot.iso InstallFS/root/boot.iso
-mv boot.tar.xz InstallFS/root/boot.tar.xz
+# Move root partion data
 cp ../Root/rootfs.tar.xz InstallFS/root/rootfs.tar.xz
