@@ -18,16 +18,14 @@ mkdir isoimage
 cp ../Core/Kernel/kernelImage ./isoimage/kernel.xz
 cp rootfs.cpio.xz ./isoimage/rootfs.xz
 cd isoimage
-
 cp $SYSLINUX/bios/core/isolinux.bin .
-#cp $SYSLINUX/bios/com32/elflink/ldlinux/ldlinux.c32 .
-#strip -s ldlinux.c32
-#echo 'default kernel.xz initrd=rootfs.xz quiet' > ./syslinux.cfg
-
+cp $SYSLINUX/bios/com32/elflink/ldlinux/ldlinux.c32 .
+strip --strip-all --discard-all ldlinux.c32
+echo 'default kernel.xz initrd=rootfs.xz quiet' > ./syslinux.cfg
 mkdir -p efi/boot
 cat << CEOF > ./efi/boot/startup.nsh
 echo -off
-echo "Loading KatOS LiveCD (this may take a while)..."
+echo "Loading KatOS LiveCD..."
 \\kernel.xz initrd=\\rootfs.xz quiet
 CEOF
 
