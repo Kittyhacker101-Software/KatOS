@@ -29,16 +29,14 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk $diskdev ${TGTDEV}
 EOF
 mkfs.vfat $diskboot
 mkfs.ext2 $diskroot
-mkdir /rootfs
-mkdir /boot
 mount $diskboot /boot
 mount $diskroot /rootfs
 
 cd /boot
-tar -xvf /root/boot.tar.xz
+tar -xf /root/boot.tar.xz
 
 cd /rootfs
-tar -xvf /root/rootfs.tar.xz
+tar -xf /root/rootfs.tar.xz
 
 mount -t proc /proc /rootfs/proc
 mount --rbind /sys /rootfs/sys
