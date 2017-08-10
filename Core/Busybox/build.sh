@@ -15,5 +15,3 @@ make \
   install -j 32
 cd ..
 rm -r busybox-*/
-strip --strip-all --discard-all -v \
-  busybox_installed/bin/busybox
