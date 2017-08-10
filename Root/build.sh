@@ -18,6 +18,7 @@ tar -xvf apk-static.apk
 cp sbin/apk.static install/sbin/apk
 rm -r sbin
 
+rm install/init
 mkdir -p install/var/cache/apk
 ln -s /var/cache/apk install/etc/apk/cache
 cat << CEOF > install/etc/apk/repositories
