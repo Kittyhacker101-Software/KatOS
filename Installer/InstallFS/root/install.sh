@@ -7,6 +7,7 @@ read -n 3 disk
 diskdev="/dev/"$disk
 diskboot=$diskdev"1"
 diskroot=$diskdev"2"
+clear
 
 dd if=/root/mbr.bin of=$diskdev
 sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk $diskdev ${TGTDEV}
