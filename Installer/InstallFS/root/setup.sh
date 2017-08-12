@@ -4,7 +4,7 @@ echo -e 'toor\ntoor\n' | passwd root
 
 apk --root / --initdb add
 apk update
-apk add alpine-keys musl openssl busybox apk-tools
+apk add alpine-keys musl openssl busybox apk-tools ca-certificates
 apk cache clean
 
 clear
