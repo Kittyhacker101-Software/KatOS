@@ -2,7 +2,7 @@
 
 Welcome to the KatOS repo, where build scripts for making core parts of KatOS are stored.
 KatOS is a collab between kittyhacker101, tbodt, and joyesh to make a lightweight and modern operating system.
-This project is a very early work in progress, and much work needs to be done before it is complete.
+This project is a early work in progress, and much work needs to be done before it is complete.
 
 # Directory Structure
 - Core - Core parts of the KatOS system
