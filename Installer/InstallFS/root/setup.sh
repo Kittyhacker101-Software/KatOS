@@ -13,6 +13,15 @@ rm glibc-2.25-r0.apk
 
 clear
 passwd root
+chown -R root:root /root
+
+apk add dropbear
+mkdir /etc/dropbear
+for key_type in rsa dss ecdsa; do
+  /usr/bin/dropbearkey \
+    -t $key_type \
+    -f /etc/dropbear/dropbear_${key_type}_host_key
+done
 
 clear
 echo "KatOS has been installed. You may remove the LiveCD now."
