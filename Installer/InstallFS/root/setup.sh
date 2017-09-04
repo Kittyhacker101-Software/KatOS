@@ -22,6 +22,7 @@ for key_type in rsa dss ecdsa; do
     -t $key_type \
     -f /etc/dropbear/dropbear_${key_type}_host_key
 done
+byobu-enable
 
 clear
 echo "KatOS has been installed. You may remove the LiveCD now."
