@@ -24,6 +24,7 @@ for key_type in rsa dss ecdsa; do
 done
 HOME="/root"
 byobu-enable
+byobu-disable-prompt
 
 clear
 echo "KatOS has been installed. You may remove the LiveCD now."
