@@ -15,7 +15,7 @@ clear
 passwd root
 chown -R root:root /root
 
-apk add dropbear
+apk add dropbear byobu
 mkdir /etc/dropbear
 for key_type in rsa dss ecdsa; do
   /usr/bin/dropbearkey \
