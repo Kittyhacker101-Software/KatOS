@@ -25,6 +25,7 @@ done
 HOME="/root"
 byobu-enable
 byobu-disable-prompt
+byobu-quiet
 touch /root/.byobu/.welcome-displayed
 
 clear
