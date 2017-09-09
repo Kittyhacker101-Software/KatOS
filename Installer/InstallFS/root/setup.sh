@@ -15,7 +15,7 @@ clear
 passwd root
 chown -R root:root /root
 
-apk add dropbear byobu
+apk add dropbear byobu openssh-sftp-server
 mkdir /etc/dropbear
 for key_type in rsa dss ecdsa; do
   /usr/bin/dropbearkey \
