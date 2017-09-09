@@ -25,6 +25,7 @@ done
 HOME="/root"
 byobu-enable
 byobu-disable-prompt
+touch /root/.byobu/.welcome-displayed
 
 clear
 echo "KatOS has been installed. You may remove the LiveCD now."
