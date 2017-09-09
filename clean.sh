@@ -31,6 +31,7 @@ cd ..
 
 cd Installer
 rm output.iso
+rm extinit.iso
 rm InstallFS/root/boot.tar.xz
 rm InstallFS/root/rootfs.tar.xz
 rm syslinux.tar.xz
