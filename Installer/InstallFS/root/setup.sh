@@ -27,6 +27,10 @@ byobu-enable
 byobu-disable-prompt
 byobu-quiet
 touch /root/.byobu/.welcome-displayed
+cat << BEOF > /root/.byobu/.tmux.conf
+set -g mouse on
+set -g mouse-utf8 on
+BEOF
 
 clear
 echo "KatOS has been installed. You may remove the LiveCD now."
