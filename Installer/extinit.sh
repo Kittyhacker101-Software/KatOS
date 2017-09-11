@@ -3,7 +3,7 @@ rm extinit.iso
 
 cp -v ../Core/Busybox/busybox_installed -r rootfs
 cd rootfs
-tar -xvf ../../Core/Initfs.tar.xz
+tar -xvf ../../Core/InitExtfs.tar.xz
 find . | cpio -R root:root -H newc -o -v | xz -9 -e --check=none > ../rootfs.cpio.xz
 cd ..
 rm -r rootfs
