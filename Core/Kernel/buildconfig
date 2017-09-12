@@ -1,6 +1,5 @@
 #
-# Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.13.0 Kernel Configuration
+# Linux/x86 4.13.0 Kernel Configuration edited for KatOS
 #
 CONFIG_64BIT=y
 CONFIG_X86_64=y
@@ -543,7 +542,7 @@ CONFIG_X86_SMAP=y
 CONFIG_X86_INTEL_MEMORY_PROTECTION_KEYS=y
 CONFIG_EFI=y
 CONFIG_EFI_STUB=y
-CONFIG_EFI_MIXED=y
+CONFIG_EFI_MIXED=n
 CONFIG_SECCOMP=y
 # CONFIG_HZ_100 is not set
 # CONFIG_HZ_250 is not set
