@@ -12,6 +12,7 @@ apk add glibc-2.25-r0.apk
 rm glibc-2.25-r0.apk
 
 echo -e 'toor\ntoor\n' | passwd root
+chown -R root:root /root
 
 apk add dropbear byobu openssh-sftp-server
 mkdir /etc/dropbear
