@@ -11,9 +11,7 @@ wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.25-r0/glib
 apk add glibc-2.25-r0.apk
 rm glibc-2.25-r0.apk
 
-clear
-passwd root
-chown -R root:root /root
+echo -e 'toor\ntoor\n' | passwd root
 
 apk add dropbear byobu openssh-sftp-server
 mkdir /etc/dropbear
@@ -27,13 +25,10 @@ byobu-enable
 byobu-disable-prompt
 byobu-quiet
 touch /root/.byobu/.welcome-displayed
-cat << BEOF > /root/.byobu/.tmux.conf
-set -g mouse on
-set -g mouse-utf8 on
-BEOF
 
 clear
 echo "KatOS has been installed. You may remove the LiveCD now."
+echo "Note : SSH default login is root:toor"
 echo "Press any key to reboot your computer..."
 read -n1
 reboot
