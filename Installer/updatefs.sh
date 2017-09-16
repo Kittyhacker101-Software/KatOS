@@ -19,7 +19,7 @@ mkdir -p efi/boot
 cat << CEOF > ./efi/boot/startup.nsh
 echo -off
 echo "Loading KatOS..."
-\\kernel.xz
+\\kernel.xz initrd=\\rootfs.xz quiet
 CEOF
 tar cfv - * | xz -9 -e --check=none > ../InstallFS/root/boot.tar.xz
 cd ..
