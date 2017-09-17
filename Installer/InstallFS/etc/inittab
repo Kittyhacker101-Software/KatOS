@@ -2,6 +2,6 @@
 ::restart:/sbin/init
 ::shutdown:sync
 ::shutdown:umount -a -r
-::shutdown:echo -e "\n  \\e[1mShutting down KatOS InstallCD!\\e[0\n"
+::shutdown:echo -e "\n  \\e[1mShutting down KatOS LiveCD!\\e[0\n"
 ::ctrlaltdel:/sbin/reboot
-::respawn:/bin/cttyhack /bin/sh /root/initi.sh
+::respawn:/bin/cttyhack /bin/sh /root/install.sh
