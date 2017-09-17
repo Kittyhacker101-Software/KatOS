@@ -2,6 +2,7 @@
 
 clear
 ls /sys/block
+fdisk -l
 echo "Please enter the device you wish to install KatOS on :"
 read -n 3 disk
 diskdev="/dev/"$disk
