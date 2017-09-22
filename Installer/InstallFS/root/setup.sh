@@ -27,6 +27,9 @@ byobu-disable-prompt
 byobu-quiet
 touch /root/.byobu/.welcome-displayed
 
+ntpd -d -q -n -p us.pool.ntp.org
+hwclock -w
+
 clear
 echo "KatOS has been installed. You may remove the LiveCD now."
 echo "Note : SSH default login is root:toor"
