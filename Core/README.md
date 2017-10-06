@@ -11,7 +11,7 @@ Warning : **Messing with these can easily mess up the KatOS build process, and c
 
 # Building
 To build all contents of this folder, type `./build.sh` in your terminal.
-This will rebuild all of the components from source code, and may take a while if you do not have a powerful PC.
+This will rebuild all of the components from source code, and may take a while if you do not have a powerful PC. All source files must be downloaded for the build to be sucessful.
 
 # Updating
 To update a component's source code, put the new source tarball in the /sources folder, and then run `./build.sh`.
