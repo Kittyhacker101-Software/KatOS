@@ -12,7 +12,7 @@ This is where the rootfs for the installed version of KatOS is packaged.
 # Building
 To build, type `./build.sh` in your terminal.
 This will merge all the compiled tarballs into a folder, which is then packaged into the installer.
-This should only take a few minutes with a modern storage device, but it may take longer with older hardware.
+This should only take a few minutes with a modern storage device, but it may take longer with older hardware. All source files must be downloaded for the build to be sucessful.
 
 # Updating
 To update a package code, put the new package in the /sources folder, and then run `./build.sh`.
