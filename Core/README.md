@@ -5,6 +5,7 @@ Warning : **Messing with these can easily mess up the KatOS build process, and c
 # File System Structure
 - Basefs.tar.xz - Base layout for installed version of KatOS.
 - Initfs.tar.xz - Base layout for initramfs.
+- InitExtfs.tar.xz - Base layout for external initramfs.
 - Busybox - Static compiled version of busybox for use in the initramfs and installer.
 - Kernel - Linux kernel.
 
@@ -14,5 +15,5 @@ This will rebuild all of the components from source code, and may take a while i
 
 # Updating
 To update a component's source code, put the new source tarball in the /sources folder, and then run `./build.sh`.
-The Basefs.tar.xz and Initfs.tar.xz are manually made, and do not contain binaries, only config files.
+The base layouts are manually made, and do not contain binaries, only config files.
 If those stop functioning due to an update, please file a GitHub issue, and I will take a look into the problem.
