@@ -1,9 +1,9 @@
 #!/bin/sh
 
-cd Kernel
+cd Busybox
 sh build.sh
 cd ..
 
-cd Busybox
+cd Kernel
 sh build.sh
 cd ..
