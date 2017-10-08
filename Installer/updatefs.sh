@@ -12,9 +12,9 @@ rm -r rootfs
 
 # Build boot partition data
 mkdir isoimage
-cp ../Core/Kernel/kernelImage ./isoimage/kernel.xz
-cp rootfs.cpio.xz ./isoimage/rootfs.xz
 cd isoimage
+cp ../../Core/Kernel/kernelImage ./kernel.xz
+cp ../rootfs.cpio.xz ./rootfs.xz
 mkdir -p efi/boot
 cat << CEOF > ./efi/boot/startup.nsh
 echo -off
