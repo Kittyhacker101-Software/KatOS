@@ -8,7 +8,7 @@ make distclean -j 32
 make defconfig -j 32
 sed -i "s/.*CONFIG_STATIC.*/CONFIG_STATIC=y/" .config
 make \
-  EXTRA_CFLAGS="-O3 -s -fno-stack-protector -fomit-frame-pointer -U_FORTIFY_SOURCE -pipe" \
+  EXTRA_CFLAGS="-Os -s -fno-stack-protector -fomit-frame-pointer -U_FORTIFY_SOURCE -pipe" \
   busybox -j 32
 make \
   CONFIG_PREFIX="../busybox_installed" \
