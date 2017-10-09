@@ -12,12 +12,10 @@ cd Core
 
 cd Busybox
 rm -r busybox_installed
-rm busybox.tar.bz2
 cd ..
 
 cd Kernel
 rm kernelImage
-rm linux.tar.xz
 cd ..
 
 cd ..
@@ -25,7 +23,6 @@ cd ..
 
 cd Root
 rm rootfs.tar.xz
-rm *.apk
 cd ..
 
 
