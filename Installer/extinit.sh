@@ -9,7 +9,7 @@ find . | cpio -R root:root -H newc -o -v | xz -9 -e --check=none > ../rootfs.cpi
 cd ..
 rm -r rootfs
 
-tar -xvf syslinux.tar.xz
+tar -xvf ../Source/syslinux-*.tar.xz
 cd $(ls -d syslinux-*)
 SYSLINUX=$(pwd)
 cd ..
