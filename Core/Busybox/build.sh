@@ -1,8 +1,7 @@
 #!/bin/sh
 rm -r busybox_installed
 
-cp ../../Source/busybox-*.tar.bz2 busybox.tar.bz2
-tar -xvf busybox.tar.bz2
+tar -xvf ../../Source/busybox-*.tar.bz2
 cd $(ls -d busybox-*)
 make distclean -j 32
 make defconfig -j 32
