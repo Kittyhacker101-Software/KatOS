@@ -4,7 +4,7 @@ rm rootfs.tar.xz
 cp -v ../Core/Busybox/busybox_installed -r install/
 cd install
 tar -xvf ../../Source/alpine-keys-*.apk
-tar -xvf ../../Source/musl-*.ap
+tar -xvf ../../Source/musl-*.apk
 tar -xvf ../../Source/busybox-*.apk
 tar -xvf ../../Core/Basefs.tar.xz
 cd ..
