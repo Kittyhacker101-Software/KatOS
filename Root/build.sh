@@ -2,18 +2,14 @@
 rm rootfs.tar.xz
 
 cp -v ../Core/Busybox/busybox_installed -r install/
-cp ../Source/alpine-keys-*.apk apk-keys.apk
-cp ../Source/apk-tools-static-*.apk apk-static.apk
-cp ../Source/musl-*.apk musl.apk
-cp ../Source/busybox-*.apk busybox.apk
 cd install
-tar -xvf ../apk-keys.apk
-tar -xvf ../musl.apk
-tar -xvf ../busybox.apk
+tar -xvf ../../Source/alpine-keys-*.apk
+tar -xvf ../../Source/musl-*.ap
+tar -xvf ../../Source/busybox-*.apk
 tar -xvf ../../Core/Basefs.tar.xz
 cd ..
 
-tar -xvf apk-static.apk
+tar -xvf ../Source/apk-tools-static-*.apk
 cp sbin/apk.static install/sbin/apk
 rm -r sbin
 
