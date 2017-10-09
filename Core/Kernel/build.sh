@@ -1,11 +1,11 @@
 #!/bin/sh
 rm kernelImage
 
-cp ../../Source/linux-*.tar.xz linux.tar.xz
-tar -xvf linux.tar.xz
+tar -xvf ../../Source/linux-*.tar.xz
 cd $(ls -d linux-*)
 make mrproper -j 32
 cp ../buildconfig .config
+#make xconfig
 make \
   CFLAGS="-O3 -s -U_FORTIFY_SOURCE -pipe" \
   bzImage -j 32
