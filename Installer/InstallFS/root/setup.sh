@@ -2,7 +2,7 @@
 
 apk --root / --initdb add
 apk update
-apk add alpine-keys musl openssl busybox apk-tools ca-certificates
+apk add alpine-keys musl openssl busybox apk-tools ca-certificates python python3
 apk cache clean
 
 # Glibc Compatibility is for Kittyhacker101 Software programs, which depend on Glibc
