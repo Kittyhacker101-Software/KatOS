@@ -16,7 +16,7 @@ This project is a work in progress, and will be finished soon.
 
 # Running
 To run KatOS in a VM or on a PC, download the repo and build an iso file, or download a precompiled release from the releases page.
-KatOS requires a x86_64 CPU, and at least 128MB of RAM. To install KatOS, 256MB of storage space is required and a 64-bit EFI/UEFI motherboard (using an external Init CD, you can also boot on BIOS systems, but that requires a 2nd storage device).
+KatOS requires a x86_64 CPU, and at least 128MB of RAM. To install KatOS, 300MB of storage space is required and a 64-bit EFI/UEFI motherboard (using an external Init CD, you can also boot on BIOS systems, but that requires a 2nd storage device).
 
 # More info
 Have extra questions, or want to help contribute?
