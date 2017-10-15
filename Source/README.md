@@ -7,4 +7,4 @@ To update files in here, change the link in the download.sh folder, delete all e
 
 # Issues
 If you have any issues with the build scripts breaking due to an update, file an issue and notify me of the problem.
-If you are having issues with the build scripts not detecting the updated file, make sure the older file is not present, and that the extention + naming scheme is similar to the older file.
+If you are having issues with the build scripts not detecting the updated component, make sure the naming scheme and file extention for the new link is similar to the old link.
