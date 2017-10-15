@@ -1,7 +1,7 @@
 # KatOS
 
 Welcome to the KatOS repo, where build scripts for making core parts of KatOS are stored.
-KatOS is a collab between kittyhacker101, tbodt, and joyesh to make a lightweight and modern operating system.
+KatOS is a modern and lightweight operating system for server systems.
 This project is a work in progress, and will be finished soon.
 
 # Directory Structure
@@ -12,10 +12,10 @@ This project is a work in progress, and will be finished soon.
 
 # Building
 - To build all parts of KatOS, type `./buildall.sh` in your terminal.
-- To remove all compiled binaries from your folder, type `./clean.sh` in your terminal.
+- To clean all binaries from your build directory, type `./clean.sh` in your terminal (reccomended when you are updating/modifying core components).
 
 # Running
-To run KatOS in a VM or on a PC, use the file from the /instaler/output.iso folder, or download a precompiled release from the releases page.
+To run KatOS in a VM or on a PC, download the repo and build an iso file, or download a precompiled release from the releases page.
 KatOS requires a x86_64 CPU, and at least 128MB of RAM. To install KatOS, 256MB of storage space is required and a 64-bit EFI/UEFI motherboard (using an external Init CD, you can also boot on BIOS systems, but that requires a 2nd storage device).
 
 # More info
