@@ -5,7 +5,6 @@ This is where the rootfs for the installed version of KatOS is packaged.
 # Packages
 - Apk-Keys - Encryption keys for Apk Package Manager
 - Apk-Static - Static compiled version of Apk, required for installer to work properly
-- Apk-Tools - Apk Package Manager
 - Busybox - A compiled version of Busybox compiled aganst Musl
 - Musl - Musl C Library
 
@@ -15,5 +14,5 @@ This will merge all the compiled tarballs into a folder, which is then packaged 
 This should only take a few minutes with a modern storage device, but it may take longer with older hardware. All source files must be downloaded for the build to be sucessful.
 
 # Updating
-To update a package code, put the new package in the /sources folder, and then run `./build.sh`.
-The rootfs build script also uses Basefs.tar.xz, which is located in the /core folder.
+To update a package code, update the data stored in the /Sources folder, and then run `./build.sh`.
+The rootfs build script also uses Basefs.tar.xz, which is located in the /Core folder.
