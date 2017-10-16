@@ -18,6 +18,8 @@ This project is a work in progress, and will be finished soon.
 To run KatOS in a VM or on a PC, download the repo and build an iso file, or download a precompiled release from the releases page.
 KatOS requires a x86_64 CPU, and at least 128MB of RAM (booting on lower amounts of RAM would require modifications to the kernel). To install KatOS, 512MB of storage space is required (although installing on smaller devices may be possible) and a 64-bit EFI/UEFI motherboard (BIOS support is possible with the use of KatOS's external init).
 
+Once installed, the default login is root:toor
+
 # More info
 Have extra questions, or want to help contribute?
 Join the KatOS Discord server at https://discord.gg/qsXJS6m for that and lots more!
