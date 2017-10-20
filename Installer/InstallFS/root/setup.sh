@@ -33,6 +33,6 @@ hwclock -w
 clear
 echo "KatOS has been installed. You may remove the LiveCD now."
 echo "Note : SSH default login is root:toor"
-echo "Press any key to reboot your computer..."
-read -n1
+echo "Press enter to reboot your computer..."
+read
 reboot

@@ -1,10 +1,11 @@
 #!/bin/sh
 
 clear
+echo "Welcome to the KatOS installer."
 fdisk -l
 ls /sys/block
 echo "Please enter the device you wish to install KatOS on :"
-read -n 3 disk
+read disk
 diskdev="/dev/"$disk
 diskboot=$diskdev"1"
 diskroot=$diskdev"2"
