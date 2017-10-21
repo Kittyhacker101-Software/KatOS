@@ -16,7 +16,7 @@ This project is a work in progress, and will be finished very soon.
 
 # Running
 To run KatOS in a VM or on a PC, download the repo and build an iso file, or download a precompiled release from the releases page.
-KatOS requires a x86_64 CPU, and at least 128MB of RAM (booting on lower amounts of RAM would require modifications to the kernel). To install KatOS, 512MB of storage space is required (although installing on smaller devices may be possible) and a 64-bit EFI/UEFI motherboard (BIOS support is possible with the use of KatOS's external init). Note that not all EFI implementations are the same, so KatOS may not work on your device, even it it supports EFI.
+KatOS requires a x86_64 CPU, and at least 128MB of RAM (booting on lower amounts of RAM would require modifications to the kernel). To install KatOS, 512MB of storage space is required (although installing on smaller devices may be possible) and a 64-bit EFI/UEFI motherboard (BIOS support is possible with the use of KatOS's external init). Not all implementations of EFI are the same, so KatOS will not boot if your EFI does not support startup.nsh files.
 
 When installed, root:toor is the default login. Note that changing your password and possibly adding a non-administrator account is reccomended after installation.
 
