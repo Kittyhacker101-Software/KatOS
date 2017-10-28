@@ -2,7 +2,6 @@
 
 Welcome to the KatOS repo, where build scripts for making core parts of KatOS are stored.
 KatOS is a modern and lightweight operating system for server systems.
-This project is a work in progress, and will be finished very soon.
 
 # Directory Structure
 - Core - Core parts of the KatOS system
@@ -16,7 +15,7 @@ This project is a work in progress, and will be finished very soon.
 
 # Running
 To run KatOS in a VM or on a PC, download the repo and build an iso file, or download a precompiled release from the releases page.
-KatOS requires a x86_64 CPU, and at least 128MB of RAM (booting on lower amounts of RAM would require modifications to the kernel). To install KatOS, 512MB of storage space is required (although installing on smaller devices may be possible) and a 64-bit EFI/UEFI motherboard (BIOS support is possible with the use of KatOS's external init). Not all implementations of EFI are the same, if your EFI motherboard doesn't support startup.nsh files, KatOS will not boot.
+KatOS requires a x86_64 CPU, and at least 128MB of RAM (booting on lower amounts of RAM would require modifications to the kernel). To install KatOS, 512MB of storage space is required (although installing on smaller devices may be possible, program sizes change, so it may not always work) and a 64-bit EFI/UEFI motherboard (BIOS support is possible with the use of KatOS's external init). Not all implementations of EFI are the same, if your EFI motherboard doesn't support startup.nsh files, KatOS will not boot.
 
 When installed, root:toor is the default login. Note that changing your password and possibly adding a non-administrator account is reccomended after installation.
 
