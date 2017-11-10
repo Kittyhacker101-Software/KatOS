@@ -14,10 +14,20 @@ KatOS is a modern and lightweight operating system for server systems.
 - To clean all binaries from your build directory, type `./clean.sh` in your terminal (reccomended when you are updating/modifying core components).
 
 # Running
-To run KatOS in a VM or on a PC, download the repo and build an iso file, or download a precompiled release from the releases page.
-KatOS requires a x86_64 CPU, and at least 128MB of RAM (booting on lower amounts of RAM would require modifications to the kernel). To install KatOS, 512MB of storage space is required (although installing on smaller devices may be possible, program sizes change, so it may not always work) and a 64-bit EFI/UEFI motherboard (BIOS support is possible with the use of KatOS's external init). Not all implementations of EFI are the same, if your EFI motherboard doesn't support startup.nsh files, KatOS will not boot.
+To run KatOS in a VM or on a PC, download the repo and build an iso file, or download a precompiled release from the releases page. When installed, root:toor is the default login. Note that changing your password and possibly adding a non-administrator account is reccomended after installation.
 
-When installed, root:toor is the default login. Note that changing your password and possibly adding a non-administrator account is reccomended after installation.
+# Minimum requirements
+The minimum requiements are listed below.
+- Any x86_64 CPU
+- 128 MB of RAM
+- ~512 MB of storage space
+- 64-bit EFI/UEFI motherboard (must be able to load startup.nsh)
+
+# Recommended requirements
+- AMD or Intel x86_64 CPU, running at 512MHz or higher
+- 256 MB of RAM
+- 1GB of storage space
+- 64-bit EFI/UEFI motherboard (must be able to load startup.nsh)
 
 # More info
 Have extra questions, or want to help contribute?
