@@ -1,15 +1,16 @@
 #!/bin/sh
 rm rootfs.tar.xz
+alias batch="chrt -b 0 nice -n 20"
 
 cp -v ../Core/Busybox/busybox_installed -r install/
 cd install
-chrt -b 0 nice -n 20 tar -xvf ../../Source/alpine-keys-*.apk
-chrt -b 0 nice -n 20 tar -xvf ../../Source/musl-*.apk
-chrt -b 0 nice -n 20 tar -xvf ../../Source/busybox-*.apk
-chrt -b 0 nice -n 20 tar -xvf ../../Core/Basefs.tar.xz
+batch tar -xvf ../../Source/alpine-keys-*.apk
+batch tar -xvf ../../Source/musl-*.apk
+batch tar -xvf ../../Source/busybox-*.apk
+batch tar -xvf ../../Core/Basefs.tar.xz
 cd ..
 
-chrt -b 0 nice -n 20 tar -xvf ../Source/apk-tools-static-*.apk
+batch tar -xvf ../Source/apk-tools-static-*.apk
 cp sbin/apk.static install/sbin/apk
 rm -r sbin
 
