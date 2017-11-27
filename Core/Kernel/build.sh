@@ -1,11 +1,12 @@
 #!/bin/sh
 rm kernelImage
+alias batch="chrt -b 0 nice -n 20"
 
-chrt -b 0 nice -n 20 tar -xvf ../../Source/linux-*.tar.xz
+batch tar -xvf ../../Source/linux-*.tar.xz
 cd $(ls -d linux-*)
-chrt -b 0 nice -n 20 make mrproper -j 32
+batch make mrproper -j 32
 cp ../buildconfig .config
-chrt -b 0 nice -n 20 make \
+batch make \
   CFLAGS="-O3 -s -U_FORTIFY_SOURCE -pipe" \
   bzImage -j 32
 cp arch/x86_64/boot/bzImage \
