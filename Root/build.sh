@@ -2,7 +2,7 @@
 rm rootfs.tar.xz
 alias batch="chrt -b 0 nice -n 20"
 
-cp -v ../Core/Busybox/busybox_installed -r install/
+mkdir install
 cd install
 batch tar -xvf ../../Source/alpine-keys-*.apk
 batch tar -xvf ../../Source/musl-*.apk
